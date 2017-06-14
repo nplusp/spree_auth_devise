@@ -4,8 +4,9 @@ Spree::Core::Engine.add_routes do
              :controllers => { :sessions => 'spree/user_sessions',
                                :registrations => 'spree/user_registrations',
                                :passwords => 'spree/user_passwords',
-                               :confirmations => 'spree/user_confirmations' },
-             :skip => [:unlocks, :omniauth_callbacks],
+                               :confirmations => 'spree/user_confirmations',
+                               :omniauth_callbacks => 'spree/omniauth_callbacks'},
+             :skip => [:unlocks],
              :path_names => { :sign_out => 'logout' },
              :path_prefix => :user
 
